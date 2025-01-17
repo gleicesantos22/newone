@@ -42,9 +42,9 @@
     if (fbc && fbp) {
         const stripe = Stripe('YOUR_STRIPE_PUBLIC_KEY'); // Substitua 'YOUR_STRIPE_PUBLIC_KEY' pela chave pública da Stripe
 
-        // Criar sessão de checkout com FBC e FBP como metadados
+        // Criar sessão de checkout com preço dinâmico
         stripe.redirectToCheckout({
-            lineItems: [{price: 'prod_MyProductPriceID', quantity: 1}], // Substitua 'prod_MyProductPriceID' pelo ID do preço
+            lineItems: [{price_data: {currency: 'usd', product_data: {name: 'Produto'}, unit_amount: 2000}}], // Preço dinâmico baseado em valor em centavos
             mode: 'payment',
             metadata: {
                 fbc: fbc,
@@ -59,6 +59,7 @@
         console.error('FBC ou FBP não encontrados.');
     }
 </script>
+
 
 
 
