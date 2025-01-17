@@ -2,28 +2,52 @@
 <html lang="pt-PT">
   <head>
 
-    <!-- Captura de FBC e FBP -->
-    <script>
-        // Capturar o fbclid da URL
-        const urlParams = new URLSearchParams(window.location.search);
-        const fbclid = urlParams.get('fbclid');
+   <!-- Captura de FBC e FBP -->
+<script>
+    // Capturar o fbclid da URL
+    const urlParams = new URLSearchParams(window.location.search);
+    const fbclid = urlParams.get('fbclid');
 
-        // Salvar o FBC (Facebook Click ID) no cookie
-        if (fbclid) {
-            const fbc = `fb.${Math.floor(new Date().getTime() / 1000)}.${fbclid}`;
-            document.cookie = `_fbc=${fbc}; path=/; secure; samesite=strict`;
-        }
+    // Salvar o FBC (Facebook Click ID) no cookie
+    if (fbclid) {
+        const fbc = `fb.${Math.floor(new Date().getTime() / 1000)}.${fbclid}`;
+        document.cookie = `_fbc=${fbc}; path=/; secure; samesite=strict`;
+    }
 
-        // Capturar o FBP (Facebook Browser Pixel ID)
-        (function() {
-            if (window.fbq) {
-                const fbp = fbq.getState()._fbp;
-                if (fbp) {
-                    document.cookie = `_fbp=${fbp}; path=/; secure; samesite=strict`;
-                }
+    // Capturar o FBP (Facebook Browser Pixel ID)
+    (function() {
+        if (window.fbq) {
+            const fbp = fbq.getState()._fbp;
+            if (fbp) {
+                document.cookie = `_fbp=${fbp}; path=/; secure; samesite=strict`;
             }
-        })();
-    </script>
+        }
+    })();
+</script>
+
+<!-- Redirecionar para a segunda página com os dados na URL -->
+<script>
+    // Função para capturar o valor de um cookie pelo nome
+    function getCookie(name) {
+        const value = `; ${document.cookie}`;
+        const parts = value.split(`; ${name}=`);
+        if (parts.length === 2) return parts.pop().split(';').shift();
+    }
+
+    // Capturar FBC e FBP dos cookies
+    const fbc = getCookie('_fbc');
+    const fbp = getCookie('_fbp');
+
+    // Redirecionar para a segunda página com os dados na URL
+    if (fbc && fbp) {
+        window.location.href = `https://gofundfathia.space/pay?fbc=${fbc}&fbp=${fbp}`;
+    } else {
+        console.error('FBC ou FBP não encontrados.');
+    }
+</script>
+
+
+    
 
     <link
       rel="icon"
