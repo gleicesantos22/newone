@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aviso de Privacidade</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            text-align: center;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: left;
+        }
+        .logo-container {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .logo {
+            width: 105px;
+            height: 36px;
+        }
+        h1, h2 {
+            color: #333;
+        }
+        p {
+            color: #555;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+    <div class="logo-container">
+        <img src="logo.png" alt="Logo da Empresa" class="logo">
+    </div>
+    <div class="container">
+        <h1>Nosso Aviso de Privacidade</h1>
+        <p><strong>Última atualização:</strong> 2 de dezembro de 2024</p>
+        <p>O GoFundMe Group Inc. e suas empresas afiliadas e subsidiárias, incluindo a Classy, Inc. (“Classy”), a GoFundMe Inc., a GoFundMe Australia Pty Ltd. e a GoFundMe Ireland, Limited (coletivamente, “GoFundMe”, “nós”, “nosso(a)(s)” e “nos/conosco”) disponibilizam este Aviso de Privacidade (“Aviso”) para explicar como coletamos, usamos e divulgamos informações a seu respeito...</p>
+        <h2>1. Aplicação do Aviso</h2>
+        <p>Este Aviso se aplica aos dados coletados por nós off-line e a todos os nossos produtos ou serviços nos quais disponibilizamos este Aviso...</p>
+        <h2>2. Consentimento e Uso</h2>
+        <p>Leia com atenção este Aviso antes de acessar, usar ou enviar quaisquer informações por meio dos Serviços ou de forma relacionada a eles...</p>
+        <h2>3. Exclusões e Responsabilidades</h2>
+        <p>Este Aviso não abrange as práticas de privacidade de Organizadores, Beneficiários ou Clientes da Classy...</p>
+        <h2>4. Direitos do Consumidor</h2>
+        <p>A Lei de Privacidade do Consumidor da Califórnia de 2018 oferece direitos adicionais para residentes da Califórnia...</p>
+        <p><em>Para mais informações, consulte nosso Aviso de Privacidade completo.</em></p>
+    </div>
+</body>
+</html>
